@@ -331,7 +331,7 @@ else {
 										<?php echo __("HELP_CHANGELOG", "NAVI"); ?>
 									</a>
 								<?php endif; ?>
-								<a href='https://tasmota.github.io/docs/' target='_blank'
+								<a href='https://spelec.in' target='_blank'
 								   class='dropdown-item nav-link <?php echo in_array(
 									   $page,
 									   []
@@ -339,47 +339,47 @@ else {
 								>
 									<?php echo __("HELP_TASDOCS", "NAVI"); ?>
 								</a>
-								<a href='https://tasmota.github.io/docs/Commands/' target='_blank'
-								   class='dropdown-item nav-link <?php echo in_array(
-									   $page,
-									   []
-								   ) ? "active" : ""; ?>'
-								>
-									<?php echo __("HELP_TASCOMMANDS", "NAVI"); ?>
-								</a>
-								<a href='https://templates.blakadder.com/' target='_blank'
-								   class='dropdown-item nav-link <?php echo in_array(
-									   $page,
-									   []
-								   ) ? "active" : ""; ?>'
-								>
-									<?php echo __("HELP_TASTEMPLATES", "NAVI"); ?>
-								</a>
-								<a href='https://tasmota.github.io/docs/Troubleshooting/' target='_blank'
-								   class='dropdown-item nav-link <?php echo in_array(
-									   $page,
-									   []
-								   ) ? "active" : ""; ?>'
-								>
-									<?php echo __("HELP_TASTROUBLESHOOTING", "NAVI"); ?>
-								</a>
+								//<a href='https://tasmota.github.io/docs/Commands/' target='_blank'
+								 //  class='dropdown-item nav-link <?php echo in_array(
+								//	   $page,
+								//	   []
+								 //  ) ? "active" : ""; ?>'
+								//>
+								//	<?php echo __("HELP_TASCOMMANDS", "NAVI"); ?>
+								//</a>
+								//<a href='https://templates.blakadder.com/' target='_blank'
+								//   class='dropdown-item nav-link <?php echo in_array(
+								//	   $page,
+								//	   []
+								//   ) ? "active" : ""; ?>'
+								//>
+								//	<?php echo __("HELP_TASTEMPLATES", "NAVI"); ?>
+								//</a>
+								//<a href='https://tasmota.github.io/docs/Troubleshooting/' target='_blank'
+								 //  class='dropdown-item nav-link <?php echo in_array(
+								//	   $page,
+								//	   []
+								 //  ) ? "active" : ""; ?>'
+								//>
+								//	<?php echo __("HELP_TASTROUBLESHOOTING", "NAVI"); ?>
+								//</a>
 								
-								<a href='https://discord.gg/Ks2Kzd4' target='_blank'
-								   class='dropdown-item nav-link <?php echo in_array(
-									   $page,
-									   []
-								   ) ? "active" : ""; ?>'
-								>
-									<?php echo __("HELP_DISCORD_TASMOTA", "NAVI"); ?>
-								</a>
-								<a href='https://discord.gg/Q6zPX3C' target='_blank'
-								   class='dropdown-item nav-link <?php echo in_array(
-									   $page,
-									   []
-								   ) ? "active" : ""; ?>'
-								>
-									<?php echo __("HELP_DISCORD_TASMOADMIN", "NAVI"); ?>
-								</a>
+								//<a href='https://discord.gg/Ks2Kzd4' target='_blank'
+								//   class='dropdown-item nav-link <?php echo in_array(
+								//	   $page,
+								//	   []
+								 //  ) ? "active" : ""; ?>'
+								//>
+								//	<?php echo __("HELP_DISCORD_TASMOTA", "NAVI"); ?>
+								//</a>
+								//<a href='https://discord.gg/Q6zPX3C' target='_blank'
+								//   class='dropdown-item nav-link <?php echo in_array(
+								//	   $page,
+								//	   []
+								 //  ) ? "active" : ""; ?>'
+								//>
+								//	<?php echo __("HELP_DISCORD_TASMOADMIN", "NAVI"); ?>
+								//</a>
 							
 							</div>
 						</li>
