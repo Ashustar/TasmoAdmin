@@ -3,7 +3,7 @@
 
 class Selfupdate {
 	
-	private $repoUrl    = "https://api.github.com/repos/reloxx13/TasmoAdmin";
+	private $repoUrl    = "https://api.github.com/repos/Ashustar/iproAdmin";
 	private $latestTag  = "";
 	private $currentTag = "";
 	private $zipfile    = "";
