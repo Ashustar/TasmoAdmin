@@ -16,11 +16,11 @@ class Config {
 			"password"              => "",
 			"refreshtime"           => "8",
 			"current_git_tag"       => "",
-			"update_automatic_lang" => "tasmota-sensors.bin",
+			"update_automatic_lang" => "",
 			"nightmode"             => "auto",
 			"login"                 => "1",
-			"scan_from_ip"          => "192.168.178.2",
-			"scan_to_ip"            => "192.168.178.254",
+			"scan_from_ip"          => "192.168.0.2",
+			"scan_to_ip"            => "192.168.0.254",
 			"homepage"              => "start",
 			"check_for_updates"     => "3",
 			"minimize_resources"    => "1",
@@ -195,7 +195,7 @@ class Config {
 		
 		if (!empty($key)) {
 			if ($key == "password") {
-				$config = "im sure you expected a top secret pw here, but you failes :)";
+				$config = "im sure you expected a top secret pw here, but it failes :)";
 			}
 			else {
 				if (!empty($config[$key])) {
@@ -257,7 +257,7 @@ class Config {
 			debug("COOKIE WRITE");
 			debug(debug_backtrace());
 		}
-		$config["password"] = "im sure you expected a top secret pw here, but you failed :)";
+		$config["password"] = "im sure you expected a top secret pw here, but it failed :)";
 		
 		$configJSON = json_encode($config);
 		
