@@ -1,5 +1,5 @@
 # IPRO ADMIN
-![Logo](https://raw.githubusercontent.com/reloxx13/TasmoAdmin/master/tasmoadmin/resources/img/logo_small.PNG)
+![Logo](https://raw.githubusercontent.com/Ashustar/iproAdmin/master/tasmoadmin/resources/img/logo_small.png)
 
 [![GitHub release](https://img.shields.io/github/release/reloxx13/TasmoAdmin.svg)](https://GitHub.com/reloxx13/TasmoAdmin/releases/) 
 [![Build Status](https://travis-ci.org/reloxx13/TasmoAdmin.svg?branch=master)](https://travis-ci.org/reloxx13/TasmoAdmin) 
