@@ -50,7 +50,7 @@
 
 	ini_set( 'session.gc_maxlifetime', 356*24*60*60 );
 	session_set_cookie_params( 356*24*60*60 );
-	session_name( "TASMO_SESSION" );
+	session_name( "IPRO_SESSION" );
 	session_start();
 
 	//	setcookie( session_name(), session_id(), time()+30*24*60*60 );
