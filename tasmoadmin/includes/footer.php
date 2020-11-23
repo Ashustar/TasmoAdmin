@@ -26,16 +26,16 @@
 				</div><?php //endif; ?>
 				<span class=''> -</span>
 				<a class=''
-				   href='https://github.com/reloxx13/TasmoAdmin'
+				   href='https://spelec.in'
 				   target='_blank'
 				>
-					TasmoAdmin GitHub<?php //echo __( "VIEW_ON_GITHUB" ); ?>
+					Powered by SPELEC<?php //echo __( "VIEW_ON_GITHUB" ); ?>
 				</a>
 				-
-				<a class='' href='https://github.com/arendst/Tasmota'
+				<a class='' href='https://spelec.in'
 				   target='_blank'
 				>
-					Tasmota GitHub<?php //echo __( "VIEW_ON_GITHUB" ); ?>
+					IPRO SMART DEVICES<?php //echo __( "VIEW_ON_GITHUB" ); ?>
 				</a>
 			
 			</span>
