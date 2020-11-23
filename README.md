@@ -45,21 +45,15 @@ It supports running on Windows, Linux, Docker container and as Home Assistant ad
 * IOCage (FreeNAS) by @tprelog
 
 
-## YouTube
-[![YouTube Video by DrZzs](https://img.youtube.com/vi/vJUhRyi3-BQ/0.jpg)](https://www.youtube.com/watch?v=vJUhRyi3-BQ)    
-by DrZzs
 
 ## Installation
 
-### Docker
-TasmoAdmin is available as a Docker image at [Docker Hub](https://hub.docker.com/r/raymondmm/tasmoadmin/). This is a Linux Alpine (3.7) based image with Nginx and Php7 installed. It supports multiple architectures, **amd64** (i.e. Synology DSM), **arm** (i.e. Raspberry PI3) and  **arm64** (i.e. Pine64). Check out the [Guide for TasmoAdmin on Docker](https://github.com/reloxx13/TasmoAdmin/wiki/Guide-for-TasmoAdmin-on-Docker) for install instructions.
-
 ### Home Assistant Addon
 TasmoAdmin is available as Home Assistant addon, please refer to
-[Home Assistant - addon TasmoAdmin](https://github.com/hassio-addons/addon-tasmoadmin) for more information.
+[Home Assistant - addon TasmoAdmin](https://github.com/Ashustar/addon-iproadmin) for more information.
 
 ### Windows
-A ready to use TasmoAdmin-XAMP-Portable-\*.zip is available on the [release page](https://github.com/reloxx13/TasmoAdmin/releases) and is based on XAMPP.
+A ready to use TasmoAdmin-XAMP-Portable-\*.zip is available on the [release page](https://github.com/Ashustar/iproAdmin/releases) and is based on XAMPP.
 
 1. Download the XAMPP Zip package from the releases page
 2. Extract the Zip (recommend to put the xamp folder on C:\
@@ -70,20 +64,6 @@ A ready to use TasmoAdmin-XAMP-Portable-\*.zip is available on the [release page
 
 Now you can type in your browser http://YOURLOCALIP and TasmoAdmin shows up.
 
-### Linux
-Running TasmoAdmin on a Linux/Unix hosts requires the following:
-* A Webserver
-  * apache2 recommended
-  * php7
-  * php-curl php-zip Modules installed
-
-You need to install a web server with php-zip and php-curl modules installed. Also mod_rewrite must be enabled. I suggest to look in the [Guide for Ubuntu Server 16.04](https://github.com/reloxx13/TasmoAdmin/wiki/Guide-for-Ubuntu-Server-16.04) and try to adjust it to your server OS.
-
-#### SELinux (#209)
-`semanage fcontext -a -t httpd_sys_rw_content_t "/var/www/tasmoadmin/tasmoadmin/data(/.*)?"`
-`semanage fcontext -a -t httpd_sys_rw_content_t "/var/www/tasmoadmin/tasmoadmin/tmp(/.*)?"`
-
-`restorecon -Rv /var/www/`
 
 ## Example Images
 #### Login Page
