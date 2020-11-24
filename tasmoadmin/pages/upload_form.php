@@ -8,7 +8,7 @@ curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 5);
 curl_setopt($ch, CURLOPT_TIMEOUT, 5);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
 
-$releaselogUrl = "https://raw.githubusercontent.com/arendst/Tasmota/development/RELEASENOTES.md?r=" . time();
+$releaselogUrl = "https://raw.githubusercontent.com/Ashustar/addon-iproadmin/blob/master/README.md?r=" . time();
 
 curl_setopt($ch, CURLOPT_URL, $releaselogUrl);
 $releaselog = curl_exec($ch);
@@ -31,25 +31,25 @@ else {
 	//			strpos( $releaselog, "Available Features and Sensors" )-5
 	//		);        //.substr($releaselog,strpos( $releaselog, "Changelog" )-4)
 	
-	$releaselog = str_replace("https://github.com/arendst/Tasmota/blob/master/tools/logo/TASMOTA_FullLogo_Vector.svg",
-		"https://raw.githubusercontent.com/arendst/Tasmota/master/tools/logo/TASMOTA_FullLogo_Vector.svg",
+	$releaselog = str_replace("https://raw.githubusercontent.com/Ashustar/iproAdmin/master/tasmoadmin/resources/img/logo_small.png",
+		"https://raw.githubusercontent.com/Ashustar/iproAdmin/master/tasmoadmin/resources/img/logo_small.png",
 		$releaselog);
 	$releaselog = $mdParser->parse($releaselog);
 	
-	$tasmotaIssueUrl = "https://github.com/arendst/Tasmota/issues/";
+	$tasmotaIssueUrl = "https://spelec.in";
 	$releaselog      = preg_replace(
 		"/\B#([\d]+)/",
 		"<a href='$tasmotaIssueUrl$1' target='_blank'>#$1</a>",
 		$releaselog
 	);
-	$releaselog      = str_replace("https://github.com/arendst/Tasmota/blob/master/tools/logo/TASMOTA_FullLogo_Vector.svg",
-		"https://raw.githubusercontent.com/arendst/Tasmota/master/tools/logo/TASMOTA_FullLogo_Vector.svg",
+	$releaselog      = str_replace("https://raw.githubusercontent.com/Ashustar/iproAdmin/master/tasmoadmin/resources/img/logo_small.png",
+		"https://raw.githubusercontent.com/Ashustar/iproAdmin/master/tasmoadmin/resources/img/logo_small.png",
 		$releaselog);
 	//$releaselog       = str_replace( "\n", "<br/>", $releaselog );
 }
 
 
-$changelogUrl = "https://raw.githubusercontent.com/arendst/Tasmota/development/tasmota/CHANGELOG.md?r=" . time();
+$changelogUrl = "https://spelec.in?r=" . time();
 curl_setopt($ch, CURLOPT_URL, $changelogUrl);
 $changelog = curl_exec($ch);
 
@@ -65,7 +65,7 @@ else {
 	
 	$changelog = $mdParser->parse($changelog);
 	
-	$tasmotaIssueUrl = "https://github.com/arendst/Tasmota/issues/";
+	$tasmotaIssueUrl = "https://spelec.in";
 	$changelog       = preg_replace(
 		"/\B#([\d]+)/",
 		"<a href='$tasmotaIssueUrl$1' target='_blank'>#$1</a>",
@@ -76,7 +76,7 @@ else {
 //	$fchangelog = $fchangelog.$changelog;
 
 
-$releaselogUrlDocs = "https://raw.githubusercontent.com/tasmota/docs/master/docs/changelog.md?r=" . time();
+$releaselogUrlDocs = "https://github.com/Ashustar/iproAdmin/blob/master/CHANGELOG.md?r=" . time();
 curl_setopt($ch, CURLOPT_URL, $releaselogUrlDocs);
 $releaselogDocs = curl_exec($ch);
 
@@ -90,7 +90,7 @@ else {
 	
 	$releaselogDocs = $mdParser->parse($releaselogDocs);
 	
-	$tasmotaIssueUrl = "https://github.com/arendst/Tasmota/issues/";
+	$tasmotaIssueUrl = "https://spelec.in";
 	$releaselogDocs  = preg_replace(
 		"/\B#([\d]+)/",
 		"<a href='$tasmotaIssueUrl$1' target='_blank'>#$1</a>",
@@ -108,7 +108,7 @@ else {
 
 
 $tasmotaReleases       = [];
-$tasmotaRepoReleaseUrl = "https://api.github.com/repos/arendst/Tasmota/releases/latest";
+$tasmotaRepoReleaseUrl = "https://spelec.in";
 curl_setopt($ch, CURLOPT_URL, $tasmotaRepoReleaseUrl);
 $release = json_decode(curl_exec($ch));
 if (curl_error($ch)) {
@@ -133,18 +133,18 @@ if (!empty($release) && !empty($release->assets)) {
 else {
 	$tasmotaReleases =
 		[
-			"tasmota-BG.bin", "tasmota-BR.bin", "tasmota-CN.bin", "tasmota-CZ.bin", "tasmota-DE.bin",
-			"tasmota-display.bin", "tasmota-ES.bin", "tasmota-FR.bin", "tasmota-GR.bin", "tasmota-HE.bin",
-			"tasmota-HU.bin", "tasmota-ir.bin", "tasmota-ircustom.bin", "tasmota-IT.bin", "tasmota-knx.bin",
-			"tasmota-KO.bin", "tasmota-lite.bin", "tasmota-NL.bin", "tasmota-PL.bin", "tasmota-PT.bin",
-			"tasmota-RO.bin", "tasmota-RU.bin", "tasmota-SE.bin", "tasmota-sensors.bin", "tasmota-SK.bin",
-			"tasmota-TR.bin", "tasmota-TW.bin", "tasmota-UK.bin", "tasmota-zbbridge.bin", "tasmota.bin",
-			"tasmota32-BG.bin", "tasmota32-BR.bin", "tasmota32-CN.bin", "tasmota32-CZ.bin", "tasmota32-DE.bin",
-			"tasmota32-display.bin", "tasmota32-ES.bin", "tasmota32-FR.bin", "tasmota32-GR.bin", "tasmota32-HE.bin",
-			"tasmota32-ir.bin", "tasmota32-ircustom.bin", "tasmota32-knx.bin", "tasmota32-lite.bin",
-			"tasmota32-PL.bin", "tasmota32-PT.bin", "tasmota32-RO.bin", "tasmota32-RU.bin", "tasmota32-SE.bin",
-			"tasmota32-sensors.bin", "tasmota32-SK.bin", "tasmota32-TR.bin", "tasmota32-TW.bin", "tasmota32-UK.bin",
-			"tasmota32-webcam.bin", "tasmota32.bin",
+			"IPro 4S", "IPro L Sense",//"tasmota-BG.bin", "tasmota-BR.bin", "tasmota-CN.bin", "tasmota-CZ.bin", "tasmota-DE.bin",
+			//"tasmota-display.bin", "tasmota-ES.bin", "tasmota-FR.bin", "tasmota-GR.bin", "tasmota-HE.bin",
+			//"tasmota-HU.bin", "tasmota-ir.bin", "tasmota-ircustom.bin", "tasmota-IT.bin", "tasmota-knx.bin",
+			//"tasmota-KO.bin", "tasmota-lite.bin", "tasmota-NL.bin", "tasmota-PL.bin", "tasmota-PT.bin",
+			//"tasmota-RO.bin", "tasmota-RU.bin", "tasmota-SE.bin", "tasmota-sensors.bin", "tasmota-SK.bin",
+			//"tasmota-TR.bin", "tasmota-TW.bin", "tasmota-UK.bin", "tasmota-zbbridge.bin", "tasmota.bin",
+			//"tasmota32-BG.bin", "tasmota32-BR.bin", "tasmota32-CN.bin", "tasmota32-CZ.bin", "tasmota32-DE.bin",
+			//"tasmota32-display.bin", "tasmota32-ES.bin", "tasmota32-FR.bin", "tasmota32-GR.bin", "tasmota32-HE.bin",
+			//"tasmota32-ir.bin", "tasmota32-ircustom.bin", "tasmota32-knx.bin", "tasmota32-lite.bin",
+			//"tasmota32-PL.bin", "tasmota32-PT.bin", "tasmota32-RO.bin", "tasmota32-RU.bin", "tasmota32-SE.bin",
+			//"tasmota32-sensors.bin", "tasmota32-SK.bin", "tasmota32-TR.bin", "tasmota32-TW.bin", "tasmota32-UK.bin",
+			//"tasmota32-webcam.bin", "tasmota32.bin",
 		];
 }
 asort($tasmotaReleases);
