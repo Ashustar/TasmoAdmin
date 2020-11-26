@@ -1,6 +1,6 @@
 #!/usr/bin/with-contenv bash
 # ==============================================================================
-# Community Hass.io Add-ons: SonWEB
+# Community Hass.io Add-ons: IPRO-WEB
 # Applies patch to remove SelfUpdate, since that is useless shit in Docker
 # ==============================================================================
 # shellcheck disable=SC1091
@@ -52,6 +52,6 @@
 ## shellcheck disable=SC2181
 #if [[ "$?" -ne 0 ]];
 #then
-#    hass.die 'Patching SonWEB OTA over HTTPS failed'
+#    hass.die 'Patching IPRO-WEB OTA over HTTPS failed'
 #fi
-#hass.log.debug 'Applied SonWEB OTA over HTTPS fix'
+#hass.log.debug 'Applied IPRO-WEB OTA over HTTPS fix'
