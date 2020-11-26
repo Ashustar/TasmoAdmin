@@ -11,15 +11,15 @@ ARG QEMU_ARCH
 LABEL org.label-schema.build-date=$BUILD_DATE \
     org.label-schema.docker.dockerfile=".docker/Dockerfile.alpine-tmpl" \
     org.label-schema.license="GNU" \
-    org.label-schema.name="TasmoAdmin" \
+    org.label-schema.name="IPRO-Admin" \
     org.label-schema.version=$BUILD_VERSION \
-    org.label-schema.description="TasmoAdmin an administrative Website for Devices flashed with Tasmota firmware." \
-    org.label-schema.url="https://github.com/reloxx13/TasmoAdmin" \
+    org.label-schema.description="IPRO Admin an administrative Application for IPro Smart Devices." \
+    org.label-schema.url="https://github.com/Ashustar/iproAdmin" \
     org.label-schema.vcs-ref=$BUILD_REF \
     org.label-schema.vcs-type="Git" \
-    org.label-schema.vcs-url="https://github.com/reloxx13/TasmoAdmin" \
-    maintainer1="Reloxx" \
-    maintainer2="Raymond M Mouthaan <raymondmmouthaan@gmail.com>"
+    org.label-schema.vcs-url="https://github.com/Ashustar/iproAdmin" \
+    maintainer1="SPELEC" \
+    
 
 # Copy qemu-*-static
 COPY tmp/qemu-$QEMU_ARCH-static /usr/bin/qemu-$QEMU_ARCH-static
@@ -51,7 +51,7 @@ RUN mkdir /run/apache2 \
     && sed -i "s#/var/www/localhost/htdocs#/app/tasmoadmin#" /etc/apache2/httpd.conf \
     && printf "\n<Directory \"/app/tasmoadmin\">\n\tAllowOverride All\n</Directory>\n" >> /etc/apache2/httpd.conf
 
-# Setup TasmoAdmin Application
+# Setup IPro Admin Application
 COPY tasmoadmin /app/tasmoadmin
 COPY .docker/start.sh /bootstrap/start.sh
 RUN chown -R apache:apache /app \
