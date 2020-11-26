@@ -8,17 +8,16 @@ ARG BUILD_VERSION
 
 # Label
 LABEL \
-    maintainer1="Reloxx <reloxx@interia.pl>" \
-    maintainer2="Raymond M Mouthaan <raymondmmouthaan@gmail.com>" \
+    maintainer1="SPELEC <http://spelec.in>" \
     org.label-schema.build-date=${BUILD_DATE} \
     org.label-schema.license="GNU" \
-    org.label-schema.name="TasmoAdmin" \
+    org.label-schema.name="IPro-Admin" \
     org.label-schema.version=${BUILD_VERSION} \
-    org.label-schema.description="TasmoAdmin - An administrative Website for Devices flashed with Tasmota firmware." \
-    org.label-schema.url="https://github.com/reloxx13/TasmoAdmin" \
-    org.label-schema.usage="https://github.com/reloxx13/TasmoAdmin/blob/master/README.md" \
+    org.label-schema.description="IPro-Admin - An administrative Application for IPro Smart Devices." \
+    org.label-schema.url="https://github.com/Ashustar/iproAdmin" \
+    org.label-schema.usage="https://github.com/Ashustar/iproAdmin/blob/master/README.md" \
     org.label-schema.vcs-ref=${BUILD_REF} \
-    org.label-schema.vcs-url="https://github.com/reloxx13/TasmoAdmin"
+    org.label-schema.vcs-url="https://github.com/Ashustar/iproAdmin"
 
 # Setup Qemu
 ARG QEMU_ARCH
